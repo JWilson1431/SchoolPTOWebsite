@@ -28,9 +28,9 @@ const AmoslandPTO = () => {
       date: 'TBD',
       time: 'TBD',
       title: 'Boys MVP Event',
-      shortDescription: 'Students show off their creative costumes! Parents welcome to watch at 2:00 PM in the main hallway.',
-      fullDescription: 'Join us for our beloved Halloween Costume Parade! Students will walk through the main hallway showing off their creative and fun costumes. This is a wonderful opportunity for families to come together and celebrate Halloween in a safe, school environment. Light refreshments will be provided after the parade.',
-      location: 'Amosland Elementary Main Hallway',
+      shortDescription: 'More information coming soon',
+      fullDescription: 'Stay tuned for additional details',
+      location: 'TBD',
       cost: 'TBD',
       requiresRegistration: false,
       capacity: null
@@ -108,19 +108,19 @@ const AmoslandPTO = () => {
       title: 'Support Via Venmo'
     },
     {
-      href: 'https://docs.google.com/forms/d/your-form-id/edit',
-      icon: '📝',
-      title: 'Volunteer Sign-Up'
-    },
-    {
       href: 'mailto:Amoslandhands@gmail.com',
       icon: '📧',
       title: 'Contact PTO'
     },
     {
-      href: 'https://www.ridleysd.org/o/aes',
-      icon: '🏫',
-      title: 'School Website'
+      href: "https://www.facebook.com/amoslandelementary",
+      icon: '📘',
+      title: "Follow Us On Facebook"
+    },
+    {
+      href: "https://btfe.smart.link/c2jjdifkw?referral_code=HMXJ2O8E&school_id=93857 ",
+      icon: '🎟️',
+      title: "Earn Box Tops For Our School"
     }
   ];
 
@@ -282,7 +282,7 @@ const AmoslandPTO = () => {
             Access important documents, make donations, and stay connected with our school community.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {quickLinks.map((link, index) => (
               <a
                 key={index}
@@ -364,7 +364,7 @@ const AmoslandPTO = () => {
       {/* Footer */}
       <footer id="contact" className="bg-green-900 text-white py-16 mt-16">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             <div>
               <h4 className="text-green-400 font-bold mb-4">Contact Information</h4>
               <p className="leading-relaxed">
@@ -751,8 +751,8 @@ const EventDetailPage = ({ event, goHome }) => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent"
                       >
-                        <option value="venmo">Venmo (@amosland-pto)</option>
-                        <option value="cash">Cash (day of event)</option>
+                        <option value="venmo">Venmo (@Amosland-HomeandSchool)</option>
+                        <option value="cash">Cash (Include Child Name, Event Name)</option>
                         <option value="check">Check (payable to Amosland PTO)</option>
                       </select>
                     </div>
@@ -782,7 +782,7 @@ const EventDetailPage = ({ event, goHome }) => {
                   {formData.paymentMethod === 'venmo' && (
                     <div className="mt-4 p-4 bg-purple-100 rounded-lg">
                       <p className="font-semibold text-purple-800">Venmo Payment Instructions:</p>
-                      <p className="text-purple-700">Send ${totalCost} to @amosland-pto</p>
+                      <p className="text-purple-700">Send ${totalCost} to @Amosland-HomeandSchool</p>
                       <p className="text-sm text-purple-600">Include your child's name and "{event.title}" in the memo</p>
                     </div>
                   )}
@@ -825,7 +825,7 @@ const EventDetailPage = ({ event, goHome }) => {
         {/* Additional Info */}
         <div className="mt-8 bg-white rounded-2xl shadow-lg p-6">
           <h3 className="text-lg font-semibold text-green-900 mb-4">Questions about this event?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600">
             <div>
               <p className="mb-2">
                 <strong>Email:</strong>{' '}
@@ -846,6 +846,8 @@ const EventDetailPage = ({ event, goHome }) => {
                   Facebook Group
                 </a>
               </p>
+            </div>
+            <div>
               <p>
                 <strong>Donations:</strong>{' '}
                 <a 
