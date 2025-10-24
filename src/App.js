@@ -9,7 +9,7 @@ const AmoslandPTO = () => {
      window.scrollTo(0, 0);
    }, [currentPage]);
 
-  const [events, setEvents] = useState([
+  const [events] = useState([
     {
       id: 1,
       date: 'October 18, 2025',
@@ -467,7 +467,7 @@ const EventDetailPage = ({ event, goHome }) => {
     e.preventDefault();
     
     // Replace with your Google Apps Script web app URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwSL4Yp3T8AdkqBqIZKwoSbTiQIwORZhKDZcZPScR4iIZ_Vng0Ufjj5rV0-MtN4xAg96w/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbOcfq5vpGawroMAgCYrpMjyWade-252SEqs-aLTJ2jOlW054gA0IThalmNbD1TprhdA/exec';
     
     // Show loading state
     const submitButton = e.target.querySelector('button[type="submit"]');
@@ -477,8 +477,6 @@ const EventDetailPage = ({ event, goHome }) => {
     
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('eventTitle', event.title);
-      formDataToSend.append('eventDate', event.date);
       formDataToSend.append('childName', formData.childName);
       formDataToSend.append('childGrade', formData.childGrade);
       formDataToSend.append('parentName', formData.parentName);
