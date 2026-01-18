@@ -24,7 +24,7 @@ namespace PTO.Api
             // Initialize CosmosDB
             var cosmosConnectionString = Environment.GetEnvironmentVariable("CosmosDBConnectionString");
             _cosmosClient = new CosmosClient(cosmosConnectionString);
-            _container = _cosmosClient.GetContainer("FormDataDB", "Submissions");
+            _container = _cosmosClient.GetContainer("EventFormData", "EventSubmissionsContainer");
         }
 
         [Function("SubmitForm")]
